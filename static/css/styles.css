@@ -1,0 +1,228 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-attachment: fixed;
+    animation: parallax 5s ease-in-out infinite;
+}
+
+@keyframes parallax {
+    0% { background-position: center; }
+    50% { background-position: left; }
+    100% { background-position: center; }
+}
+
+/* Main Container */
+.main-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Neon Border for Main Card */
+.neon-border {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 60px rgba(0, 255, 255, 0.3);
+    text-align: center;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.2);
+    }
+}
+
+/* Heading Styling */
+.heading {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 30px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 200px;
+}
+
+button:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 50px rgba(0, 255, 255, 0.6);
+}
+
+/* Capture Button Specific Styling */
+button.capture-btn {
+    background-color: rgba(255, 0, 0, 0.7);
+    border-color: rgba(255, 0, 0, 0.5);
+}
+
+button.capture-btn:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 50px rgba(255, 0, 0, 0.6);
+}
+
+/* Upload Button Specific Styling */
+button.upload-btn {
+    background-color: rgba(0, 255, 0, 0.7);
+    border-color: rgba(0, 255, 0, 0.5);
+}
+
+button.upload-btn:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), 0 0 50px rgba(0, 255, 0, 0.6);
+}
+
+/* Video Section */
+.video-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#video {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+}
+
+#capture {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#fileInput {
+    padding: 10px;
+    font-size: 1rem;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    color: #fff;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+}
+
+#upload {
+    font-size: 1rem;
+    padding: 12px 24px;
+}
+
+/* Team Card Section */
+.team-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    margin-top: 40px;
+    animation: pulse 3s infinite;
+}
+
+.team-card h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    margin: 15px 0;
+    color: #fff;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(0, 255, 255, 0.5);
+}
+
+.team-member h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .neon-border {
+        padding: 30px;
+    }
+
+    .video-section,
+    .upload-section {
+        width: 100%;
+    }
+
+    .team-card {
+        max-width: 100%;
+    }
+
+    .team-member img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

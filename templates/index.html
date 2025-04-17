@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Link to favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='/static/images/face-scan.png') }}" type="image/x-icon">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Neon Border Section for Emotion Detection -->
+        <div class="neon-border">
+            <h1 class="heading">😎 Emotion Detector</h1>
+
+            <!-- Video Section for capturing video feed -->
+            <div class="video-section">
+                <video id="video" autoplay></video>
+                <button id="capture" class="capture-btn">📸 Capture</button>
+            </div>
+
+            <!-- Upload Section for selecting an image -->
+            <div class="upload-section">
+                <input type="file" id="fileInput" accept="image/*">
+                <button id="upload" class="upload-btn">📂 Upload</button>
+            </div>
+
+            <!-- Hidden canvas for processing the video image -->
+            <canvas id="canvas" style="display: none;"></canvas>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <!-- Team Card Section -->
+    <div class="team-card">
+        <h2>Meet the Team</h2>
+        <div class="team-member">
+            <img src="/static/images/avni.jpg" alt="Team Member 1">
+            <h3>Avni Goel</h3>
+            <p>Lead Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="/static/images/donkey.jpg" alt="Team Member 2">
+            <h3>Vaishnavi Paroliya</h3>
+            <p>Co-Developer</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
